@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        /*System.out.print("\nEnter 1 numbers: ");
+        System.out.print("\nEnter 1 numbers: ");
         double r = scan.nextDouble();
         Eleven objectEleven = new Eleven();
         objectEleven.perimeter(r);
@@ -24,15 +24,22 @@ public class Main {
         Thirteen objectThirteen = new Thirteen();
         objectThirteen.rectangle(length, width);
 
-        Fourteen objectFourteen = new Fourteen();
-        objectFourteen.flag();*/
-
         System.out.print("\nEnter 2 numbers: ");
         int a = scan.nextInt();
         int b = scan.nextInt();
         System.out.println("The number a is " + a);
         System.out.println("The number b is " + b);
+        Fourteen objectFourteen = new Fourteen();
+        objectFourteen.swap(a, b);
+
+        System.out.print("Enter string: ");
+        String str = scan.nextLine();
         Fifteen objectFifteen = new Fifteen();
-        objectFifteen.swap(a, b);
+        objectFifteen.reverse(str);
+
+        System.out.print("Enter string: ");
+        String strCount = scan.nextLine();
+        Sixteen objectSixteen = new Sixteen();
+        objectSixteen.count(strCount);
     }
 }
