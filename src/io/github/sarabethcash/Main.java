@@ -1,5 +1,6 @@
 package io.github.sarabethcash;
 
+import javax.sql.StatementEvent;
 import java.util.Scanner;
 
 public class Main {
@@ -41,5 +42,18 @@ public class Main {
         String strCount = scan.nextLine();
         Sixteen objectSixteen = new Sixteen();
         objectSixteen.count(strCount);
+
+        Seventeen objectSeventeen = new Seventeen();
+        objectSeventeen.format();
+
+        Eighteen objectEighteen =  new Eighteen();
+        objectEighteen.systemTime();
+
+        Nineteen objectNineteen = new Nineteen();
+        objectNineteen.formatTime();
+
+        Twenty objectTwenty = new Twenty();
+        objectTwenty.printOdd();
+
     }
 }

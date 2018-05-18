@@ -1,6 +1,8 @@
 package io.github.sarabethcash;
 
-import java.util.ArrayList;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.SimpleTimeZone;
 
 class Eleven{
     public void perimeter(double r){
@@ -50,28 +52,64 @@ class Fifteen{
     }
 }
 
-class Sixteen{
-    public void count(String str){
+class Sixteen {
+    public void count(String str) {
         int letterCount = 0;
         int numberCount = 0;
         int spaceCount = 0;
         int count = 0;
-        for(int i = 0; i < str.length()-1; i ++){
-            if((str.charAt(i) >= 65 && str.charAt(i) <= 90) || (str.charAt(i) >= 97 && str.charAt(i) <= 122)) {
+        for (int i = 0; i < str.length() - 1; i++) {
+            if ((str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') || (str.charAt(i) >= 'a' && str.charAt(i) <= 'z')) {
                 letterCount++;
-            }
-            if(str.charAt(i) >= 48 && str.charAt(i) <= 57){
+            } else if (str.charAt(i) >= '0' && str.charAt(i) <= '9') {
                 numberCount++;
-            }
-            if(str.charAt(i) == 32) {
+            } else if (str.charAt(i) == 32) {
                 spaceCount++;
-            }
-            else
+            } else
                 count++;
         }
         System.out.println(letterCount);
         System.out.println(numberCount);
         System.out.println(spaceCount);
         System.out.println(count);
+    }
+}
+
+class Seventeen{
+    public void format(){
+        System.out.println("Twinkle, twinkle, little star,");
+        System.out.println("\t\tHow I wonder what you are!");
+        System.out.println("\t\t\t\tUp above the world so high,");
+        System.out.println("\t\t\t\tLike a diamond in the sky.");
+        System.out.println("Twinkle, twinkle, little star,");
+        System.out.println("\t\tHow I wonder what you are!");
+    }
+}
+
+class Eighteen {
+    public void systemTime() {
+        Date date = new Date();
+
+        System.out.println("Current Date time: " + date);
+    }
+}
+
+class Nineteen{
+    public void formatTime(){
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/dd/MM HH:MM:ss.SSS");
+        Date date = new Date();
+        String str = sdf.format(date);
+
+        System.out.println("Now: " + str);
+    }
+}
+
+class Twenty{
+    public void printOdd(){
+        for(int i = 0; i < 100; i++){
+            if(i % 2 != 0){
+                System.out.println(i);
+            }
+        }
     }
 }
